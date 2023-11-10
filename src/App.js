@@ -3,6 +3,8 @@ import {BrowserRouter, Routes, Route} from "react-router-dom";
 import HomePage from "./Pages/HomePage";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import EtablissementDetails from "./Pages/EtablissementDetails";
+import EtudiantPage from "./Pages/EtudiantPage";
+import EtudiantDetails from "./Pages/EtudiantDetails";
 
 function App() {
   return <>
@@ -10,6 +12,8 @@ function App() {
       <Routes>
         <Route path={"/"} element={<HomePage />}/>
         <Route path={"/etablissement/:id"} element={<EtablissementDetails />}/>
+        <Route path={"/etudiants"} element={<EtudiantPage />}/>
+        <Route path={"/etudiant/:id"} element={<EtudiantDetails />}/>
       </Routes>
     </BrowserRouter>
   </>;
