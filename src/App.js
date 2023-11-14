@@ -9,6 +9,9 @@ import UEPage from "./Pages/UEPage";
 import UEDetails from "./Pages/UEDetails";
 import FormateurPage from "./Pages/FormateurPage";
 import FormateurDetails from "./Pages/FormateurDetails";
+import SuivrePage from "./Pages/SuivrePage";
+import SuivreEtudiantPage from "./Pages/SuivreEtudiantPage";
+import SuivreUEPage from "./Pages/SuivreUEPage";
 
 function App() {
   return <>
@@ -22,6 +25,9 @@ function App() {
         <Route path={"/ue/:id"} element={<UEDetails />}/>
         <Route path={"/formateurs"} element={<FormateurPage />}/>
         <Route path={"/formateur/:id"} element={<FormateurDetails />}/>
+        <Route path={"/suivre"} element={<SuivrePage />}/>
+        <Route path={"/suivre/etudiant/:id"} element={<SuivreEtudiantPage />}/>
+        <Route path={"/suivre/ue/:id"} element={<SuivreUEPage />}/>
       </Routes>
     </BrowserRouter>
   </>;
