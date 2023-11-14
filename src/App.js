@@ -12,6 +12,9 @@ import FormateurDetails from "./Pages/FormateurDetails";
 import SuivrePage from "./Pages/SuivrePage";
 import SuivreEtudiantPage from "./Pages/SuivreEtudiantPage";
 import SuivreUEPage from "./Pages/SuivreUEPage";
+import ProposerPage from "./Pages/ProposerPage";
+import ProposerUEPage from "./Pages/ProposerUEPage";
+import ProposerEtablissementPage from "./Pages/ProposerEtablissementPage";
 
 function App() {
   return <>
@@ -28,6 +31,9 @@ function App() {
         <Route path={"/suivre"} element={<SuivrePage />}/>
         <Route path={"/suivre/etudiant/:id"} element={<SuivreEtudiantPage />}/>
         <Route path={"/suivre/ue/:id"} element={<SuivreUEPage />}/>
+        <Route path={"/proposer"} element={<ProposerPage />}/>
+        <Route path={"/proposer/ue/:id"} element={<ProposerUEPage />}/>
+        <Route path={"/proposer/etablissement/:id"} element={<ProposerEtablissementPage />}/>
       </Routes>
     </BrowserRouter>
   </>;
