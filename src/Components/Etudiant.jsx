@@ -7,7 +7,8 @@ const Etudiant = ({etudiant}) => {
     return <>
         <Card style={{ width: '18rem' }}>
             <Card.Body>
-                <Card.Title>{etudiant.etu_nom + " " + etudiant.etu_prenom}</Card.Title>
+                <Card.Img variant="top" src={"http://127.0.0.1:3000/images/utilisateur/"+etudiant.etu_id} />
+                <Card.Title>{etudiant.etu_nom + " " + etudiant.etu_prenom} {etudiant.etu_id}</Card.Title>
                 <Card.Text>
                     {etudiant.etu_numero}
                 </Card.Text>
