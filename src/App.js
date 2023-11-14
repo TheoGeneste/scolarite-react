@@ -7,6 +7,8 @@ import EtudiantPage from "./Pages/EtudiantPage";
 import EtudiantDetails from "./Pages/EtudiantDetails";
 import UEPage from "./Pages/UEPage";
 import UEDetails from "./Pages/UEDetails";
+import FormateurPage from "./Pages/FormateurPage";
+import FormateurDetails from "./Pages/FormateurDetails";
 
 function App() {
   return <>
@@ -18,6 +20,8 @@ function App() {
         <Route path={"/etudiant/:id"} element={<EtudiantDetails />}/>
         <Route path={"/ue"} element={<UEPage />}/>
         <Route path={"/ue/:id"} element={<UEDetails />}/>
+        <Route path={"/formateurs"} element={<FormateurPage />}/>
+        <Route path={"/formateur/:id"} element={<FormateurDetails />}/>
       </Routes>
     </BrowserRouter>
   </>;
