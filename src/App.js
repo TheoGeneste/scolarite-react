@@ -2,6 +2,7 @@ import './App.css';
 import {BrowserRouter, Routes, Route} from "react-router-dom";
 import HomePage from "./Pages/HomePage";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'react-toastify/dist/ReactToastify.css';
 import EtablissementDetails from "./Pages/EtablissementDetails";
 import EtudiantPage from "./Pages/EtudiantPage";
 import EtudiantDetails from "./Pages/EtudiantDetails";
@@ -15,7 +16,8 @@ import SuivreUEPage from "./Pages/SuivreUEPage";
 import ProposerPage from "./Pages/ProposerPage";
 import ProposerUEPage from "./Pages/ProposerUEPage";
 import ProposerEtablissementPage from "./Pages/ProposerEtablissementPage";
-
+import CreateEtudiant from "./Pages/CreateEtudiant";
+import { ToastContainer } from 'react-toastify';
 function App() {
   return <>
     <BrowserRouter>
@@ -23,6 +25,7 @@ function App() {
         <Route path={"/"} element={<HomePage />}/>
         <Route path={"/etablissement/:id"} element={<EtablissementDetails />}/>
         <Route path={"/etudiants"} element={<EtudiantPage />}/>
+        <Route path={"/etudiant/create"} element={<CreateEtudiant />}/>
         <Route path={"/etudiant/:id"} element={<EtudiantDetails />}/>
         <Route path={"/ue"} element={<UEPage />}/>
         <Route path={"/ue/:id"} element={<UEDetails />}/>
@@ -36,6 +39,18 @@ function App() {
         <Route path={"/proposer/etablissement/:id"} element={<ProposerEtablissementPage />}/>
       </Routes>
     </BrowserRouter>
+    <ToastContainer
+        position="bottom-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="colored"
+    />
   </>;
 }
 

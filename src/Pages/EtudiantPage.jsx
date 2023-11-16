@@ -1,8 +1,8 @@
 import React, {useEffect, useState} from 'react';
 import etudiantService from "../Services/etudiantService";
 import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
 import Etudiant from "../Components/Etudiant";
+import {Link} from 'react-router-dom'
 
 
 const EtudiantPage = () => {
@@ -23,6 +23,7 @@ const EtudiantPage = () => {
 
 
     return <>
+        <Link to={"/etudiant/create"}><Button>Ajouter un etudiant</Button></Link>
         {etudiants.map(etu => {
             return <Etudiant key={etu.etu_id} etudiant={etu}/>
         })}
