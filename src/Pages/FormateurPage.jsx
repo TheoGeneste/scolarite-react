@@ -21,6 +21,7 @@ const FormateurPage = () => {
     }, []);
 
     return <>
+        <Link to={"/formateur/create"}><Button>Ajouter un formateur</Button></Link>
         {formateurs.map(formateur => {
             return <Card style={{ width: '18rem' }} key={formateur.fo_id}>
                 <Card.Body>

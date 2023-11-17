@@ -18,6 +18,7 @@ import ProposerUEPage from "./Pages/ProposerUEPage";
 import ProposerEtablissementPage from "./Pages/ProposerEtablissementPage";
 import CreateEtudiant from "./Pages/CreateEtudiant";
 import { ToastContainer } from 'react-toastify';
+import CreateFormateur from "./Pages/CreateFormateur";
 function App() {
   return <>
     <BrowserRouter>
@@ -30,6 +31,7 @@ function App() {
         <Route path={"/ue"} element={<UEPage />}/>
         <Route path={"/ue/:id"} element={<UEDetails />}/>
         <Route path={"/formateurs"} element={<FormateurPage />}/>
+        <Route path={"/formateur/create"} element={<CreateFormateur />}/>
         <Route path={"/formateur/:id"} element={<FormateurDetails />}/>
         <Route path={"/suivre"} element={<SuivrePage />}/>
         <Route path={"/suivre/etudiant/:id"} element={<SuivreEtudiantPage />}/>
