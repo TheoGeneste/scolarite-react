@@ -12,6 +12,14 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
+@font-face {
+  font-family: "veteran_typewriter";
+  src: url("veteran_typewriter.ttf") format("truetype");
+}
+
+body{
+  font-family: "veteran_typewriter" !important;
+}
 
 .App-header {
   background-color: #282c34;
